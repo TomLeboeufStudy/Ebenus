@@ -1,0 +1,8 @@
+/target/
+/.project
+/maven-quest-ebenus-dao-manual/.idea/
+/maven-quest-ebenus-dao-manual/maven-quest-ebenus-dao-manual.iml
+/.metadata/
+/maven-quest-ebenus-dao-jdbc/.idea
+/maven-quest-ebenus-web/target/maven-quest-ebenus-web-1.0-SNAPSHOT/
+/maven-quest-ebenus-web/.idea/
