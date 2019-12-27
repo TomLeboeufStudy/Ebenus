@@ -6,6 +6,9 @@
 package com.cours.ebenus.servlets;
 
 import com.cours.ebenus.dao.entities.Utilisateur;
+import com.cours.ebenus.factory.AbstractDaoFactory;
+import com.cours.ebenus.service.IServiceFacade;
+import com.cours.ebenus.service.ServiceFacade;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -24,6 +27,8 @@ public class CrudUserServlet extends HttpServlet {
 
     private static final Log log = LogFactory.getLog(LoginServlet.class);
 
+    private IServiceFacade serviceFacade = null;
+
     /**
      * Méthode d'initialisation de la Servlet
      *
@@ -31,6 +36,8 @@ public class CrudUserServlet extends HttpServlet {
      */
     @Override
     public void init() throws ServletException {
+
+        serviceFacade = new ServiceFacade(AbstractDaoFactory.FactoryDaoType.JDBC_DAO_FACTORY);
 
     }
 
@@ -65,6 +72,9 @@ public class CrudUserServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        request.getSession().removeAttribute("user");
+        response.sendRedirect(this.getServletContext().getContextPath());
 
     }
 

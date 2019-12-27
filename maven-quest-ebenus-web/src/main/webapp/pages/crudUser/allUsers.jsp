@@ -39,7 +39,7 @@
                         </h2>
 
                         <form id="user-desconnect-CrudUserServlet" action="${pageContext.request.contextPath}/CrudUserServlet" method="post">
-                            <h1 class="logout"> <a href="#" role="button">Se Deconnecter</a></h1>
+                            <h1 class="logout"> <a href="/" role="button">Se Deconnecter</a></h1>
                         </form>
 
                         <ul class="User f-left">
